@@ -15,7 +15,7 @@
     */
         createButton(1);
 
-        $("#button1").click(function() {
+        $("#button1").click(() => {
           window.alert("You clicked a button!");
         });
 
@@ -25,7 +25,7 @@
     */
         createButton(2);
 
-        $("#button2").bind("click", function() {
+        $("#button2").bind("click", () => {
           window.alert("You clicked a button using bind!");
         });
 
@@ -36,7 +36,7 @@
     */
         createButton(3);
 
-        $("#button3").on("click", function() {
+        $("#button3").on("click", () => {
           window.alert("You clicked a button using on!");
         });
 
@@ -48,7 +48,7 @@
         createButton(4);
         createButton(5);
 
-        $("#button5, #button4").on("click", function() {
+        $("#button5, #button4").on("click", () => {
           window.alert("You clicked a button!");
         });
 
@@ -85,15 +85,15 @@
         $("body").append(span);
 
         $("#div_css").on({
-          mouseenter: function() {
+          mouseenter: () => {
             alert("Mouse entered the div!");
             $("#span").text("Mouse entered the div!");
           },
-          mouseleave: function() {
+          mouseleave: () => {
             alert("Mouse left the div!");
             $("#span").text("Mouse left the div!");
           },
-          click: function() {
+          click: () => {
             alert("You just clicked inside the div!");
             $("#span").text("You just clicked inside the div!");
           }
@@ -129,7 +129,7 @@
 
         $("body").append(div_window_size, "<br><br>");
 
-        $(window).resize(function() {
+        $(window).resize(() => {
           $("#window_size").text(
             `Width: ${$(window).width()} Height: ${$(window).height()}`
           );
